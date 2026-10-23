@@ -1,0 +1,26 @@
+<header class="navbar navbar-expand-md d-print-none">
+    <div class="container-xl">
+        <a class="navbar-brand" href="{% url 'planner:dashboard' %}">
+            <span class="avatar avatar-sm bg-primary text-white me-2"><i class="ti ti-school"></i></span>
+            Учебный планировщик
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-menu" aria-controls="navbar-menu"
+                aria-expanded="false" aria-label="Открыть меню">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'planner:dashboard' %}">
+                    <i class="ti ti-layout-dashboard me-1"></i>Главная
+                </a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'tasks' %}active{% endif %}" href="{% url 'planner:tasks' %}">
+                    <i class="ti ti-list-check me-1"></i>Задания
+                </a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'subjects' %}active{% endif %}" href="{% url 'planner:subjects' %}">
+                    <i class="ti ti-books me-1"></i>Дисциплины
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
