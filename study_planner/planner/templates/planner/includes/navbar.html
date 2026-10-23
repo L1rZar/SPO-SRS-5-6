@@ -20,6 +20,9 @@
                 <a class="nav-link {% if request.resolver_match.url_name == 'subjects' %}active{% endif %}" href="{% url 'planner:subjects' %}">
                     <i class="ti ti-books me-1"></i>Дисциплины
                 </a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'api_console' %}active{% endif %}" href="{% url 'planner:api_console' %}">
+                    <i class="ti ti-code me-1"></i>REST API
+                </a>
             </div>
         </div>
     </div>

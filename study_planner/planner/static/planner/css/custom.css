@@ -1,220 +1,127 @@
-
+/* Мятная цветовая тема учебного планировщика */
 :root {
-    --planner-bg: #eef5f2;
-    --planner-card: #ffffff;
-    --planner-accent: #159b87;
-    --planner-accent-hover: #107c6d;
-    --planner-border: #dce9e3;
-    --planner-text: #263b35;
-    --planner-shadow: 0 3px 12px rgba(35, 78, 63, 0.045);
+    --mint-bg: #f1faf6;
+    --mint-surface: #ffffff;
+    --mint-primary: #27866d;
+    --mint-primary-dark: #1f6f5a;
+    --mint-border: #d5ebe1;
+    --mint-text: #24483d;
+    --mint-muted: #6b8a7f;
 }
 
 body {
-    background: var(--planner-bg);
-    color: var(--planner-text);
-}
-
-.page {
-    background: var(--planner-bg);
+    background: var(--mint-bg);
+    color: var(--mint-text);
 }
 
 .page-wrapper {
     min-height: calc(100vh - 60px);
+    background: var(--mint-bg);
 }
 
-.page-body {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-}
-
-.page-title {
-    color: #243d35;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-}
-
-.card {
-    background: var(--planner-card);
-    border: 1px solid var(--planner-border);
-    border-radius: 12px;
-    box-shadow: var(--planner-shadow);
-    overflow: hidden;
-}
-
-.card-header {
-    background: #ffffff;
-    border-bottom-color: #e7efeb;
-    padding: 1rem 1.25rem;
-}
-
-.card-title {
-    color: #2d473e;
-    font-weight: 600;
-}
-
-.card-body {
-    background: #ffffff;
-}
-
-.card-footer {
-    background: #f8fbf9;
-    border-top-color: var(--planner-border);
+.navbar,
+.navbar-expand-md,
+.navbar-brand {
+    background-color: #e0f4eb;
 }
 
 .navbar {
-    background: #ffffff;
-    border-bottom: 1px solid var(--planner-border);
-    box-shadow: 0 2px 8px rgba(35, 78, 63, 0.035);
+    border-bottom: 1px solid var(--mint-border);
 }
 
-.navbar-brand {
-    color: #25483d;
-    font-weight: 700;
+.navbar-brand,
+.navbar a {
+    color: var(--mint-text);
 }
 
-.navbar-brand:hover {
-    color: var(--planner-accent-hover);
+.navbar a:hover {
+    color: var(--mint-primary-dark);
 }
 
-.navbar .nav-link {
-    border-radius: 8px;
-    margin: 0 2px;
-    transition: background-color 0.15s ease, color 0.15s ease;
+.page-title {
+    color: var(--mint-text);
 }
 
-.navbar .nav-link:hover {
-    background: #eff8f4;
-    color: var(--planner-accent-hover);
+.card {
+    border: 1px solid var(--mint-border);
+    border-radius: 12px;
+    background: var(--mint-surface);
+    box-shadow: 0 3px 12px rgba(39, 134, 109, 0.045);
 }
 
-.navbar .nav-link.active {
-    background: #e2f4ed;
-    color: #117b69;
-    font-weight: 600;
+.card-header {
+    background: #f7fcf9;
+    border-bottom-color: var(--mint-border);
 }
 
-.avatar.bg-primary {
-    background: var(--planner-accent) !important;
+.card-title,
+.form-label {
+    color: var(--mint-text);
 }
 
 .btn-primary {
-    --tblr-btn-bg: var(--planner-accent);
-    --tblr-btn-border-color: var(--planner-accent);
-    --tblr-btn-hover-bg: var(--planner-accent-hover);
-    --tblr-btn-hover-border-color: var(--planner-accent-hover);
-    --tblr-btn-active-bg: var(--planner-accent-hover);
-    --tblr-btn-active-border-color: var(--planner-accent-hover);
+    --tblr-btn-bg: var(--mint-primary);
+    --tblr-btn-border-color: var(--mint-primary);
+    --tblr-btn-hover-bg: var(--mint-primary-dark);
+    --tblr-btn-hover-border-color: var(--mint-primary-dark);
+    background-color: var(--mint-primary);
+    border-color: var(--mint-primary);
 }
 
-.btn-primary:hover {
-    background: var(--planner-accent-hover);
-    border-color: var(--planner-accent-hover);
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--mint-primary-dark);
+    border-color: var(--mint-primary-dark);
 }
 
 .btn-outline-secondary {
-    border-color: #ceded6;
-    color: #526b60;
+    color: #527367;
+    border-color: #b8d8cb;
 }
 
 .btn-outline-secondary:hover {
-    background: #edf6f1;
-    border-color: #b7d5c7;
-    color: #285b4a;
-}
-
-.bg-primary-lt {
-    background: #e2f4ed !important;
-    color: #117b69 !important;
-}
-
-.bg-azure-lt {
-    background: #e4f3f3 !important;
-    color: #267d83 !important;
-}
-
-.text-primary {
-    color: var(--planner-accent) !important;
-}
-
-a {
-    color: #148875;
-}
-
-a:hover {
-    color: var(--planner-accent-hover);
+    color: var(--mint-text);
+    background: #e5f5ed;
+    border-color: #9acbb8;
 }
 
 .form-control,
 .form-select {
-    border-color: #d6e4dc;
-    border-radius: 8px;
+    border-color: #cfe4da;
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: #66bbaa;
-    box-shadow: 0 0 0 0.2rem rgba(21, 155, 135, 0.12);
+    border-color: #75bda3;
+    box-shadow: 0 0 0 .2rem rgba(39, 134, 109, .13);
 }
 
-.form-label {
-    color: #405b4f;
-    font-weight: 500;
-}
-
-.table {
-    --tblr-table-border-color: #e6efea;
-    margin-bottom: 0;
+.table > :not(caption) > * > * {
+    border-bottom-color: #e1efe8;
 }
 
 .table thead th {
-    background: #f6faf7;
-    color: #60776b;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.025em;
-    text-transform: uppercase;
+    background: #f4fbf7;
+    color: #55766a;
 }
 
-.table td {
-    vertical-align: middle;
-}
-
-.table th {
-    white-space: nowrap;
-}
-
-.table tbody tr {
-    transition: background-color 0.15s ease;
-}
-
-.table tbody tr:hover {
-    background: #f5faf7;
-}
-
-.list-group-item {
-    border-color: #e6efea;
-    transition: background-color 0.15s ease;
-}
-
-.list-group-item-action:hover {
-    background: #f3f9f5;
+.table tbody tr:hover > * {
+    background: #f5fcf8;
 }
 
 .badge.bg-primary-lt {
-    background: #e2f4ed !important;
-    color: #117b69 !important;
+    color: var(--mint-primary-dark) !important;
+    background: #dff4e9 !important;
 }
 
-.empty {
-    color: #63796e;
+.alert-info {
+    color: #2d6553;
+    background: #e5f6ed;
+    border-color: #c6e9d8;
 }
 
-.empty-icon {
-    color: #65aa96;
-}
-
-.empty-title {
-    color: #344f43;
+.text-secondary {
+    color: var(--mint-muted) !important;
 }
 
 .min-width-0 {
@@ -260,9 +167,5 @@ a:hover {
 
     .card-body {
         padding: 1rem;
-    }
-
-    .card-header {
-        padding: 0.9rem 1rem;
     }
 }

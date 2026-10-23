@@ -132,3 +132,7 @@ def subject_list(request):
         'subjects': subjects,
         'form': form,
     })
+
+
+def api_console(request):
+    return render(request, 'planner/api_console.html')
