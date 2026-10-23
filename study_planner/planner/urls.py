@@ -11,4 +11,5 @@ urlpatterns = [
     path('tasks/<int:task_id>/status/', views.task_change_status, name='task_change_status'),
     path('tasks/<int:task_id>/delete/', views.task_delete, name='task_delete'),
     path('subjects/', views.subject_list, name='subjects'),
+    path('api-console/', views.api_console, name='api_console'),
 ]
