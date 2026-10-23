@@ -1,0 +1,38 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Переменные окружения и секреты
+.env
+.env.*
+!.env.example
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Статические файлы, собранные для production
+staticfiles/
+
+# Тестирование и покрытие кода
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE и редакторы
+.vscode/
+.idea/
+
+# Операционная система
+.DS_Store
+Thumbs.db
